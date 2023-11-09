@@ -1,0 +1,14 @@
+.red{
+    color:red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.bg-yellow{
+    background-color: yellow;
+}
+.bg-green{
+    background-color: greenyellow;
+}
+#newPara{ /*only thing with the id newPara will have this styles*/
+    color:wheat;
+    background-color: brown;
+}

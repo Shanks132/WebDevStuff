@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        /*Element selectors*/
+
+        /* class selector */
+        .red{
+            background-color: rgb(255, 0, 64);
+        }
+
+        /* id selector */
+        #orange{
+            background-color: orange;
+        }
+
+        /*child selectors*/
+        /*in this we select a paragraph inside a div
+        this will only work if the para is direct child of div  */
+        div>p{
+            background-color: black;
+            color:navajowhite;
+        }
+
+        /*descendant selector
+        if its inside div, no matter how deep, it has this propeties*/
+        div p{
+            background-color: purple;
+            color:gold;
+        }
+
+        /*Universal selector*/
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        /*Pseudo selectors*/
+        a:visited {
+            color: chocolate;
+        }
+        a:link{
+            color: green;
+        }   
+        a:active{
+            /* works while clicking */
+            color: cadetblue;
+        }
+        a:hover{
+            background-color: darkorchid;
+        }
+        p:first-child{ 
+            /*wherever p is the first child it becomes follow this style*/
+            background-color:royalblue ;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class = red>I am a div</div>
+    <div id = orange>I am a div 2</div>
+    <div><P>I am a paragraph inside a div</P></div>
+    <article>
+    <Div><article><p>I am para inside an article which is inside a div</p><p>i am a second child </p></article></Div>    
+    </article>
+    <a href = https://www.google.com>GO TO GOOGLE BLYAT</a>
+</body>
+</html>

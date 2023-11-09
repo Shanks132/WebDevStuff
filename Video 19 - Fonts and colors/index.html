@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS- Fonts, Text Colors etc.</title>
+</head>
+<style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+
+    h1{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-style: italic;
+        font-weight: 1000;
+        text-decoration:underline;
+    }
+    p{
+        font-family:cursive, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 0px;
+        margin: 0px;
+        line-height: 1.5;
+        
+    }
+    .customFont{    
+        font-family: 'Edu TAS Beginner', cursive;
+        padding: 0px;
+        margin: 0px;
+        font-size: 20px;
+        text-overflow: clip;
+        border: 2px solid brown;
+        width: 512px;
+        word-break: break-all;
+        text-align: center;
+    }
+    h2{
+        text-transform:capitalize;
+        text-decoration:underline;
+        text-decoration-style:wavy;
+        text-decoration-color:chartreuse;
+        text-decoration-thickness:3px;
+    }
+</style>    
+<body>
+    <div>
+        <h1>FONTS</h1>
+        <h2>About Fonts Lorem ipsum dolor sit amet.</h2>
+        <p>Fonts changing and the other fonts are just for backup.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum distinctio ipsam temporibus? 
+        </p>
+        <p class = customFont>Importing Custom font- Edu TAS Beginner, font-size: 20px;; Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi unde aliquid cumque reiciendis, assumenda sint reprehenderit ipsam ullam ad. Autem accusantium animi laboriosam sapiente delectus ratione quidem veritatis. Sunt?</p>
+    </div>
+    
+</body>
+</html>
