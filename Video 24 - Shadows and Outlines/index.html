@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        border : 2px solid blue;
+        font-size:  36px;
+        box-shadow: 5px 5px 15px 5px rgb(49, 94, 94);
+    }
+    p{
+        font-size:  24px;
+        text-shadow: 2px 2px 2px  rgb(32, 2, 2);
+        line-height: 1.5em;
+        color: rgb(248, 228, 7);
+        font-family: Arial, Helvetica, sans-serif;
+        outline: 2px dotted rgb(17, 17, 180);
+        outline-offset: 3px;        /* Outline is outside the box model */
+        border: 2px solid red;
+        border-radius: 12px;   /* Outlines will follow border radius and all */
+    }
+</style>
+<body>
+    <div class = "box">
+        I am a box. 
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quis inventore veritatis labore commodi, nulla ullam omnis quaerat atque sit dolor illum at cupiditate itaque eaque beatae temporibus aliquam ab in, necessitatibus, earum amet laborum dolore cumque. Debitis accusamus, repellendus culpa ducimus eligendi, laudantium at impedit maxime ea, aspernatur earum.</p>
+</body>
+</html>
+
+<!-- 
+Shadow format
+ box-shadow: h-offset v-offset blur spread color inset;
+h-offset and v-offset: Determines the shadow's horizontal and vertical position.
+blur: The larger the value, the blurrier the shadow.
+spread: Expands or shrinks the shadow size.
+color: Defines the shadow color.
+inset: Makes the shadow inner.
+
+outline
+
+Outline: width style color
+
+Width-set of outline width
+Style- dotted, solid  or etc
+
+4) Diff between outline and border- 
+Border inside and outline outside
+(Outline is not the part of box-model)
+ 
+We can also change the offset of outline - for change the distance/size of outline, 
+
+outline-offset: Npx 
+
+- Note - we cannot change the distance/size of border seperately, but we can change the distance/size of outline
+
+5) Border radius- to make curve in  border's corner 
+
+border-radius: 2px
+- All four corner of border are rounded by 2 px-->

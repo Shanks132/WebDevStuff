@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        .box{
+            border : 2px solid greenyellow;
+            margin: 0;
+            padding: 5px;
+            display: inline-block;
+            width:200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "box">I am a box </div>
+    <span>I am a</span>
+    <span>good dev</span>
+</body>
+</html>
+
+<!-- Here are most Common Display Properties used:
+1.none: This value hides the element completely. The element is not rendered on the page, and it doesn't take up any space. It's as if the element doesn't exist in the document structure. Elements with display: none; won't be visible, and they won't interact with other elements on the page.
+
+2.block: Block-level elements, such as <div>, <p>, and <h1>, have display: block; by default. They create a new block formatting context, and they typically start on a new line, taking up the full width of their parent container. You can set properties like width and height for block-level elements.
+
+3.inline: Inline-level elements, like <span>, <a>, and <strong>, have display: inline; by default. They flow within the content of block-level elements and only take up as much horizontal space as necessary. You can't set properties like width and height for inline-level elements.
+
+4.inline-block: This value combines aspects of both inline and block. An element with display: inline-block; behaves like an inline element but allows you to set properties like width, height, and margins.
+
+5.table, table-cell, table-row, etc.: These values are used to create table-based layouts, allowing you to create complex structures similar to HTML tables using non-table elements. They are typically used for more advanced layout purposes.
+
+6.flex and grid: These values are part of the modern CSS layout system. display: flex; and display: grid; allow you to create flexible and grid-based layouts, respectively, with a high degree of control over the placement and alignment of elements within their containers.
+
+7.inherit and initial: These values are used to inherit or reset the display property to the default value defined by the browser or parent element.
+
+The choice of the display property value depends on the desired layout and behavior of the element. For example, you might use display: block; for creating sections of content, display: inline; for inline text or inline links, and display: flex; or display: grid; for creating more sophisticated layouts. -->

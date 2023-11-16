@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing in CSS</title>
+    <style>
+        html{
+            font-size: 24px;
+        }
+        .box{
+            border: solid rebeccapurple 2px;
+            box-sizing: border-box;
+            background-color: rgb(12, 114, 80);
+            min-height: 50vh;
+            
+            width: 60vw; /*vw - viewport width ; */
+            margin: auto;
+            padding: 0;
+        }
+        .container{
+            border: solid rebeccapurple 2px;
+            box-sizing: border-box;
+            background-color: rgb(12, 114, 80);
+            font-size: 20px; 
+            height: 60vh;
+            width: 60vw; /*vw - viewport width ; */
+            margin : 25px auto; /*top and bottom 25px and rest auto*/
+            padding: 0;
+        }
+        .container p{
+            font-size: 1.5em;
+            width : 50%;     
+            background-color: brown;
+        }
+        .container a{
+            font-size: 1.1rem;
+            
+        }
+        .dabba{
+            width:40vmin; /*  vmin - means whatever dimension smaller in this device */
+            height:40vmax;
+        }
+    </style>
+</head>
+<body>
+<div class = "box">
+    <p>pee pee poo poo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus excepturi placeat rerum esse beatae assumenda error sunt. Similique, maxime dolor quasi distinctio eum mollitia eligendi in ipsa minima, nulla exercitationem officia aliquam! Voluptatem ut repudiandae suscipit magnam nihil! In, eaque cupiditate! </p>
+</div>
+<div class = "container">
+    This is normal text 
+
+    <p>This will be 1.5 times larger because of using em units </p>
+    <a>This is using rem units so it will be 2 times root element size</a>
+</div>
+<div class = "dabba">
+    This is normal text 
+
+    <p>This will be 1.5 times larger because of using em units and take half of divs(parent) width </p>
+    <a>This is using rem units so it will be 1.1 times root element size</a>
+</div>
+    
+</body>
+</html>

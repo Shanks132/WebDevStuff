@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Property</title>
+</head>
+<style>
+    .box{
+        width: 20vw;
+        height: 20vh;
+        border: 2px solid black;
+        /* overflow-y: hidden;
+        overflow-x: hidden  ;
+        overflow: scroll hidden; */
+        overflow: scroll;
+        /* white-space: nowrap; */
+        /* text-overflow: ellipsis; */
+
+    }
+</style>
+<body>
+    <div class = "box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni harum suscipit fuga quaerat iusto nemo autem exercitationem dicta, vitae consectetur? Alias necessitatibus sint doloribus nostrum enim unde dolor, quas veniam minima earum optio possimus, aperiam animi?
+    </div>
+    
+</body>
+</html>
+
+<!-- summery:
+CSS Overflow: content that is too large for an elements box, 
+                          CSS overflow property can be used to modify how overflow is handled.
+
+Property:
+
+1) overflow: visible;   // (default property) overflow content is visible.
+
+2) overflow: scroll;   // Scrollbar always visible even content not overflow the box.
+
+3) overflow: auto;   // If content overflow the box, scrollbar automatically visible or created.
+
+4) overflow: clip;  // No scroll bar, even content overflow. overflow content not visible (same as overflow:scroll property).
+
+//** doubt - what is the programmatically scroll?
+
+5)  white-space: nowrap; //content only in single line (in x axis only), so we can scroll horizontally only. 
+
+6) text-overflow: ellipsis;  //content only in single line (in x axis only), overflow text will not visible, overflow text denoted by  ... (three dots) . 
+
+7) overflow-x: hidden
+overflow-y: scroll   //  scrollbar in x and y direction as per requirement.
+
+=>Shorten for overflow x and overflow y
+
+overflow: hidden scroll
+
+**doubt- in my case (overflow-x: scroll; overflow-y: hidden;) not working -->

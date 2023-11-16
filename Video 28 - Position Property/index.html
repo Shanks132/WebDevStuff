@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS positiom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {  
+            border: 2px solid rgb(6, 6, 6);
+            height: 133px;
+            width: 60vw;
+            padding: 9px;        
+            color: rgb(136, 8, 8);
+        }
+
+        .box1 {
+            background-color: aqua;
+            position: absolute;
+            top: 0px;/* 10 px relative to the eldest postioned element in this case the html itself */
+            left: 30px;
+            /* position: sticky;
+            top: 0px;
+            width: 90vw; */
+
+        }
+
+        .box2 {
+            background-color: rgb(45, 172, 172);
+            /* position: relative;
+            top : 48px;
+            left: 48px; */
+        }
+
+        .box3 {
+            background-color: rgb(68, 145, 145);
+            /* position:fixed;
+            bottom: 5px; */
+        }
+
+        .box4 {
+            background-color: rgb(27, 86, 86);
+        }
+
+        .parent {
+            /*Exceptions : transform filter or perspective properties can make element appear positioned  */
+            padding: 40px;
+            margin: 40px;
+            border: 2px solid blueviolet;
+            /* position:absolute ; */
+            height: fit-content;
+
+            /* transform: translate(0); */
+            /* filter: invert(); */
+            /* perspective: 0px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box box1">NEVER GONNA GIVE YOU UP</div>
+        <div class="box box2">NEVER GONNA LET YOU DOWN</div>
+        <div class="box box3">NEVER GONNA RUN AROUND</div>
+        <div class="box box4">AND DESERT YOU</div>
+    </div>
+</body>
+
+</html>
+
+<!-- Summary : 
+
+Relative - Apni orginal position se change hogi
+Absolute - apne parent ke relative position change hogi
+Fixed - page mein position fixed hojaygi
+Sticky - page mein kahin bhi ho, scroll krne pr neeche nhi jaygi, stick hojaygi
+
+ -->
