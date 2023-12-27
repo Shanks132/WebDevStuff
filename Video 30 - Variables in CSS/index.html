@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in CSS</title>
+</head>
+<Style>
+    :root{
+        --color:rgb(48, 184, 199);
+        --seccolor:rgb(12, 234, 238);
+        --borderCol:rgb(104, 125, 64);
+        --defPad:23px;
+        --defOp:0.8;
+    }
+    *{
+        margin: 0px;
+        padding:0px ;
+    }
+    div:first-child{
+        background-color: var(--seccolor);
+        
+    }
+    .container{ 
+        background-color:var(--color);
+        padding: var(--defPad);
+    }
+    ul{
+        display: flex;
+        
+    }
+    ul li{
+        list-style-position: inside;
+        padding: 15px;
+        margin: 5px;
+        opacity: var(--defOp);
+        background-color: var(--color);
+        border: 2px solid var(--borderCol);
+    }
+    ul li:first-child{
+        --color:rgb(220, 113, 32);
+        background-color:var(--color,blue);
+        
+    }
+
+</Style>
+
+<body>
+    <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ab illo, obcaecati doloremque ipsa similique distinctio dolorum quaerat repudiandae nisi nobis corrupti. Reprehenderit alias rem nihil pariatur vel cum esse praesentium error, fugit ducimus obcaecati voluptas expedita neque! Harum odit dolorem placeat, eveniet repellendus fuga!
+    </div>
+
+</body>
+
+</html>

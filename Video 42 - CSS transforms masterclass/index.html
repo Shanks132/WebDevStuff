@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .box{
+        background-color: beige;
+        height: 20vh;
+        width: 20vw;
+        border: 2px solid black;
+        font-size: xx-large;
+        display: flex;
+        ;
+        
+        /* transform: rotate(40deg); */
+        /* transform: rotate(0.25turn);  */
+        /* 1 turn = 360 degree */
+        
+        /* transform: rotateX(40deg); */
+        /* transform: rotateY(40deg); */
+        /* transform: rotateZ(40deg); */
+
+        /* transform: scale(1.5); */
+        /* transform: scale(1,1.2,1); */
+        /* also there are scalex scaley scalez functions  */
+        
+        /* transform:skewX(5deg); */
+        /* transform:skewY(5deg); */
+        /* skew cant be done in z axis */
+        
+        /* transform: translate(25%); */
+        /* transform: translateZ(10%); */
+        /* transform: translateX(20px);  similarly available for y */ 
+
+        /* appplying multiple transforms */
+        /* transform: translate(10%,50%) skewX(15deg) rotate(0.5turn); */
+        transform-origin: 0% 0%; 
+        /* resets the origin */
+        transform: rotate(-45deg);
+        
+    }
+    .container{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:80vh;
+        border:solid purple 2px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">Dabba</div>
+    </div>
+    
+</body>
+</html>

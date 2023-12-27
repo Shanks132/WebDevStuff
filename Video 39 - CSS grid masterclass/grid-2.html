@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height:80vh;
+        width:80vw;
+        border:2px solid black;
+        display:grid;
+        grid-template-columns: 1fr 2fr 1fr; 
+        /* can also declare as grid-template-columns:repeat(4,1fr) */
+        /* grid-template-columns(4,minmax(100px,1fr)) 
+            minimum 100px maximum 1fr*/
+        gap: 10px 15px;
+        justify-items: center;
+        align-items: center;
+        /* divides the container into 4 fractions 
+        in which 2parts by 4 uses 2 parts*/
+        /* 
+        grid-template-areas: "nav nav nav"
+                            "side article article"
+                            "footer footer footer";
+                            
+                            
+        justify items and align items used within cell
+        and justify content and align content used for the whole grid
+        place-content does both justify-content and align-content together*/
+        
+        
+    }
+
+    .item{
+        height:48px;
+        width:48px;
+        border:2px solid black;
+        font-size: xx-large;
+     }
+    .item1{
+        /* grid-area: nav; */
+        background-color: aqua;
+        align-self: flex-end;
+        justify-self: end;
+    }
+    /*
+       
+    .item4{
+        grid-area:side;
+    }
+    .item5{
+        grid-area: footer;
+        background-color: cadetblue;
+    } */
+</style>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item">6</div>
+    </div>
+    
+</body>
+</html>

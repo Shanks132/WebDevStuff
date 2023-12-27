@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS object fit and position</title>
+</head>
+<style>
+    .container{
+        background-color: aqua;
+        height:900px;
+        width:400px;
+        background-repeat: no-repeat;
+        border: 5px dashed black;
+        /* background-position: top right; */
+        background-position:center center ;
+        background-image: url("https://www.essentiallysports.com/stories/bodybuilding-news-14-wtf-mike-o-hearns-rare-picture-as-a-14-yo-leaves-perplexed-bodybuilding-world-convinced-son-will-be-twice-his-size-at-same-age/assets/1.jpeg");
+    }
+    /* img{
+        width:400px;
+        height:400px;
+        /* object-fit: cover; */
+        /*hide the area given for this part while maintaining the original img aspect ratio  */
+        /* object-position: bottom left; */
+        /* image cut to fit and given place in object postion is given priority */
+
+        /* object-fit: fill; is the default setting */
+        /* cover the above parameters while also maintaing aspect ratio */
+        
+        /* object-fit: contain; */
+        /* whole image is displayed but some place not covered 
+        object-fit: scale-down;
+        object-position: 10px 20px;
+    } */
+</style>
+<body>
+    <div class="container">
+        <!-- <img src = "https://i.insider.com/602ee9e3d3ad27001837f2af?width=1200&format=jpeg" alt = "Rick"></div>
+     -->
+</body>
+</html>

@@ -1,0 +1,345 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.logo {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    /* background-color: rgb(49, 69, 220); */
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* border : 2px solid rgb(226, 136, 19) */
+}
+
+.right ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.right ul li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    /* border : 2px solid rgb(146, 5, 29) */
+    cursor: pointer;
+}
+
+.banner {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.bannerp1 .p1 {
+    font-size: xx-large;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.bannerp1 .p2 {
+    font-size: large;
+    text-align: center;
+
+}
+
+.bannerp2 button {
+    color: azure;
+    background-color: aqua;
+    border-radius: 6px;
+}
+
+
+.downloadLinks {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: "Rick Rick Rick"
+        "rickButt rickButt rickButt" 
+        "eng germ ita"
+        "esp fr por"
+        "jp kr ch"
+        "ch1 free1 free2";
+    margin-top: 2vw;
+    gap: 10px;
+    align-self: center;
+    justify-items: center;
+    
+}
+.downloadLinks span{
+    grid-area: Rick;
+}
+.rickButton {
+    grid-area: rickButt;
+    background-color: rgb(7, 197, 197);
+    color: rgb(255, 255, 255);
+    height:10vh;
+    width:10vw;
+    border-radius: 5px;
+    cursor: crosshair;
+}
+.english {
+    grid-area: eng;
+}
+
+.german {
+    grid-area: germ;
+}
+
+.italian {
+    grid-area: ita;
+}
+
+.Spanish {
+    grid-area: esp;
+}
+
+.French {
+    grid-area: fr;
+}
+
+.Portuguese {
+    grid-area: por;
+}
+
+.Japanese {
+    grid-area: jp;
+}
+
+.Korean {
+    grid-area: kr;
+}
+
+.Chinese {
+    grid-area: ch;
+}
+
+.TraditionalChinese {
+    grid-area: ch1;
+}
+
+.downloadLinks div {
+    text-align: center;
+    background-color: rgb(233, 233, 228);
+    border: 2px solid rgb(233, 233, 220);
+    width: 20vw;
+    height: fit-content;
+    
+}
+
+.bit32 {
+    background-color: rgb(3, 142, 166);
+    padding: 10px;
+    margin: 5px;
+    color: white;
+    height: fit-content;
+}
+
+.bit64 {
+    background-color: rgb(12, 159, 4);
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    height:fit-content;
+}
+
+@media only screen and (max-width:900px) {
+    .logo {
+        display: flex;
+        width: 10vw;
+        height: fit-content;
+        /* background-color: rgb(49, 69, 220); */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbar {
+        display: flex;  
+        
+        align-self: center;
+        align-items: center;
+        font-style: italic;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 60vw;
+        /* border : 2px solid rgb(226, 136, 19) */
+    }
+    
+    .right ul {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .right ul li {
+        list-style: none;
+        margin: 10px;
+        padding: 10px;
+        /* border : 2px solid rgb(146, 5, 29) */
+        cursor: pointer;
+    }
+    
+    .banner {
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    
+    }
+    
+    .bannerp1 .p1 {
+        font-size: xx-large;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    
+    .bannerp1 .p2 {
+        font-size: large;
+        text-align: center;
+    
+    }
+    
+    .bannerp2 button {
+        color: azure;
+        background-color: aqua;
+        border-radius: 6px;
+    }
+    
+    
+    .downloadLinks {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-areas: "Rick Rick Rick"
+            "rickButt rickButt rickButt" 
+            "eng germ ita"
+            "esp fr por"
+            "jp kr ch"
+            "ch1 free1 free2";
+        margin-top: 2vw;
+        gap: 10px;
+        align-self: center;
+        justify-items: center;
+        
+    }
+    .downloadLinks {
+        display: grid;
+       
+        height: 100vh;
+        margin: 5vw;
+        gap: 12px;
+        width:100vw;
+        align-items: center;
+        justify-items: center;
+        grid-template-areas:"Rick"
+            "rickButt" 
+            "eng"
+            "germ"
+            "ita"
+            "esp"
+            "fr"
+            "por"
+            "jp"
+            "kr"
+            "ch"
+            "ch1"
+            "free1"
+            "free2";
+    }
+    
+    .rickButton{
+    grid-area: rickButt;
+    background-color: rgb(10, 180, 180);
+    color: rgb(236, 238, 240);
+    height:10vh;
+    width:10vw;
+    border-radius: 5px;
+    cursor: crosshair;
+    }
+
+    .downloadLinks div {
+        text-align: center;
+        background-color: rgb(233, 233, 228);
+        border: 2px solid rgb(233, 233, 220);
+        width: 60vw;
+        height: 40vh  ;
+        
+    }
+
+
+    .english {
+        grid-area: eng;
+    }
+
+    .german {
+        grid-area: germ;
+    }
+
+    .italian {
+        grid-area: ita;
+    }
+
+    .Spanish {
+        grid-area: esp;
+    }
+
+    .French {
+        grid-area: fr;
+    }
+
+    .Portuguese {
+        grid-area: por;
+    }
+
+    .Japanese {
+        grid-area: jp;
+    }
+
+    .Korean {
+        grid-area: kr;
+    }
+
+    .Chinese {
+        grid-area: ch;
+    }
+
+    .TraditionalChinese {
+        grid-area: ch1;
+    }
+    .downloadLinks span{
+        grid-area: Rick;
+    }
+    .bit32 {
+        background-color: rgb(3, 142, 166);
+        padding: 10px;
+        margin: 5px;
+        color: white;
+        height: fit-content;
+    }
+    
+    .bit64 {
+        background-color: rgb(12, 159, 4);
+        padding: 10px;
+        margin: 10px;
+        color: white;
+        height:fit-content;
+    }
+}

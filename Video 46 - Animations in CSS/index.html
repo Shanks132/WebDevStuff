@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+</head>
+<style>
+    .container{
+        background-color: purple;
+        width: 50vw;
+        height: 40vh;
+    }
+    .box{
+        background-color: aqua;
+        width:20vw;
+        height:30vh;
+            animation: ShanksAnime 2s ease-in 1s 1 alternate backwards;
+        /* animation-name: ShanksAnime;
+        animation-duration:4s ;
+        animation-timing-function:ease-in-out ;
+        animation-delay: 5s;
+        animation-iteration-count:10 ;
+        animation-direction:alternate ;
+        animation play-state:paused
+        animation fill-state:forwards */
+    }
+    .box2{
+        background-color: rgb(217, 27, 198);
+        width:20vw;
+        height:30vh;
+        animation: rollingBox 1s ease-in-out 1s infinite alternate;
+        
+    }
+
+    /* animations from here */
+    @keyframes ShanksAnime {
+        from{
+            background-color: yellow;
+        }
+        to{
+            transform: translate(100px,200px);
+            background-color: violet;
+        }
+    }
+    @keyframes rollingBox 
+    {
+        0%{transform: translate(100px) rotate(0deg) }
+        20%{transform: translate(200px) rotate(50deg) }
+        40%{transform: translate(300px) rotate(90deg) }
+        60%{transform: translate(400px) rotate(120deg)}
+        80%{transform: translate(500px) rotate(150deg) }
+        100%{transform: translate(600px) rotate(180deg)}
+
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box2"></div>
+</div>
+    
+</body>
+</html>

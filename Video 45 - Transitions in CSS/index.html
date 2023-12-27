@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions in CSS</title>
+</head> 
+<style>
+    .container{
+        background-color: rgb(3, 158, 158);
+        width:50vw;
+        height:40vh;
+    }
+    .box{
+        background-color: rgb(167, 53, 36);
+        width:20vw;
+        height:20vh;
+
+        /* transition-property:transform ; */
+        /* transition-property: transform,background-color;
+        transition-duration:2s ;
+        transition-timing-function:ease ;
+        transition-delay:1s ;  */
+        transition: all 2s ease-in-out 1s;
+
+        
+    }
+    .translate{
+        transform: translateX(30%) translateY(40%);
+        background-color: rgb(160, 160, 11);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>

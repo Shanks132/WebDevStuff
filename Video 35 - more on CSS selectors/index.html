@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box:first-child{
+        background-color: aqua;
+        font-size: larger;
+    }
+    .box::first-letter{
+        color: green;
+        font-size: xx-large;
+    }
+    .boxes *{    
+        /* all elements inside boxes div */
+        text-decoration:underline;
+        border:2px dashed black
+    }
+    .p, .a,  f[data-color = "Primary"]{
+        margin-top:42px;
+    }
+
+    .box:nth-child(even){
+        background-color: burlywood;
+    }
+    .box:nth-last-child(1){
+        background-color: rgb(121, 17, 55);
+    }
+    /* pseudo elements */
+    .boxes::before{
+        content: "Before Boxes";
+    }
+    .boxes::after{
+        content: "After"
+    }
+    ::selection{
+        color: chartreuse;
+    }
+    input::placeholder{
+        color: brown;
+    }
+    
+
+</style>
+<body>
+    <div data-color="Primary" class = "boxes">
+        <div class="box">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quod magni quos possimus unde explicabo inventore eligendi libero, voluptate officia, debitis veniam consectetur odit distinctio eum molestias ex reiciendis accusantium ratione enim tempora voluptates molestiae id cupiditate! Quo magnam nostrum quas id tempore dolore, corrupti quasi unde earum eum. 
+        </div>
+        <div class="box">Voluptatibus, aliquam quos, repudiandae saepe quam illum eius aliquid placeat doloribus nesciunt id incidunt, debitis dignissimos quis beatae pariatur est. Possimus placeat molestiae eaque cumque.</div>
+        <div class="box">Cumque in assumenda, sed nam ipsam eligendi consequuntur libero architecto doloribus, totam mollitia rem? Autem ipsum excepturi error maiores eos nam provident dolores, sit esse repudiandae odio mollitia unde qui facilis numquam non rem fuga, sed cumque. Laborum reprehenderit ipsam vero iure, obcaecati, qui voluptates quis facere voluptatem ratione in esse voluptas!</div>
+    </div>
+    <input type = "text" placeholder="type name">
+    
+</body>
+</html>
+<!-- 
+@sky-productions
+3 weeks ago
+✦
+Selectors in CSS
+01:41
+Selectors are important when building websites
+Different types of selectors can be used to target specific elements
+✦
+CSS selectors can be used to select the first child or apply styles to specific lines.
+03:22
+To select the first child of a parent, use the dot box as the first child.
+To select the first line of a specified element, use the CSS selector for first line.
+✦
+Universal selector and attribute selectors in CSS
+05:03
+The universal selector, represented by '*', can be used to select and apply styles to all elements within a container.
+Attribute selectors, like 'data-color=primary', can be used to select elements based on specific attributes and apply styles to them.
+✦
+CSS selectors can be used to apply styling based on different attributes and groups of elements
+06:44
+Margin top can be applied to elements with a specific data color attribute
+Grouping selectors allows you to apply styles to multiple elements with different attributes
+✦
+CSS nth-child selector allows you to select elements based on their position in its parent
+08:25
+You can specify a number inside nth-child() to select a specific child element
+There are also experimental properties related to nth-child selector, which should be avoided
+✦
+CSS selectors can be used to dynamically insert elements before or after the main content
+10:06
+The 'before' pseudo-element inserts an element before the main content
+The 'after' pseudo-element inserts an element after the main content
+✦
+CSS selectors can be used to apply styles to selected elements
+11:47
+Selectors can be used to select all elements on a page
+Selectors can also be used to select specific parts of elements, such as the first letter or a placeholder
+✦
+Changing the size of placeholder and adding effects
+13:24
+I can change the size of the placeholder and make it overflow with a ridiculously large font size
+Can also add effects like changing color to blue and giving it a web development look -->

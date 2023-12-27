@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+</head>
+<style>
+    body {
+        background-color: red;
+    }
+    @media only screen and (orientation:landscape){
+        body{
+            border: 10px solid #000;
+        }
+    }
+    @media only screen and (max-width:455px) {
+        body {
+            background-color: blue;
+            /* That is - if the width of a website < 455px
+        then the body will be blue  */
+        }
+        .boxes{
+            flex-direction: column;
+        }
+
+    }
+
+    /* @media not|only mediatype and
+     (expressions){
+        CSS-Code
+     } */
+    .boxes {
+        display: flex;
+    }
+
+    .box {
+
+        width: 344px;
+        height: 30vw;
+        background-color: steelblue;
+        padding: 3px;
+        margin: 3px;
+    }
+</style>
+
+<body>
+    <div>
+        I have a red body
+    </div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+
+CSS media queries are used to apply different styles to a document based on various characteristics of the device or viewport, such as its width, height, resolution, and other features. Media queries enable you to create responsive designs that adapt to different devices or screen sizes. They are commonly used in conjunction with CSS to implement responsive web design.
+Basic Structure of Media Query:
+@media media-type and (media-feature) {
+  /* CSS rules to be applied when the media query conditions are met */
+}
+
+1.@media: This is the at-rule that defines a media query.
+2.media-type: Specifies the type of media to which the styles apply. Common values include screen (for computer screens), print (for printed pages), and all (for all media types). The screen type is most commonly used for web development.
+3.media-feature: Describes the characteristics of the targeted device or viewport, such as max-width, min-width, orientation, etc..
+
+Media Query play a crucial role in responsive web design by adapting layouts and styles to provide an optimal user experience across a variety of devices and screen sizes. -->

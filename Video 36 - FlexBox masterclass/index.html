@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=i, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border:2px solid red;
+        display:flex;
+        /* becomes flexbox */
+        height:80vh;
+        
+        
+        /* justify-content: center; */
+        /* horizontally center */
+        
+        /* align-items: center;  */
+        /* vertically center when only one line is there*/
+
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse; */
+        flex-wrap: wrap;
+        /* align-content: center; */
+        /* flex-flow: row wrap; 
+        sets both direction and flow wrap*/
+
+        /* gap: 10px;
+        can also write 
+        gap:15px 2px;
+        
+        both row and col together 
+        gap between items*/
+        
+        row-gap: 15px;
+        column-gap: 2px;
+    }
+    .item{
+        /* flex-grow:1; */
+        height:60px;
+        width:60px;
+        background-color: purple;
+        border:2px solid black;
+        margin:2px;
+        color: beige;       
+    }
+    .order-1{
+        order:1;
+    }
+    .order-2{
+        order:2;
+        /* used for arranging in flexbox */
+    }
+    .item1{
+        /* flex-grow: 5; */
+        flex-shrink: 4;
+        align-self: flex-end; 
+        /* aligns itself alone (if no other allignment given)*/
+    }
+     
+</style>
+<body>
+    <main>
+     <div class = "container">
+        <div class="item order-2">1-Order no.2 item</div>
+        <div class="item order-1">2 - Order no.1 item</div>
+        <div class="item item1">3 default order 0</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item"></div>
+        
+
+     </div>   
+    </main>
+</body>
