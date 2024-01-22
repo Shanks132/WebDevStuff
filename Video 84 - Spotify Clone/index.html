@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bochify-Scuffed Music Player</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="utility.css">
+
+<body>
+    <div class="container flex">
+        <div class="left  bg-black">
+            <div class="home bg-grey rounded m1 ">
+                <div class="logo invert m1"><img src="img/logo.svg"></div>
+                <ul>
+                    <li><img class="invert" src="img/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+            <div class="library flex rounded m1 ">
+                <header><img class="invert" src=img/libraryIcon.svg>Your Library</header>
+
+                <div class="createPlaylist p-1 flex rounded"> Current Playlist
+                    <ul id="playlist">
+
+                    </ul>
+                </div>
+
+
+                
+            </div>
+
+
+
+        </div>
+        <!-- <footer class="libFoot flex bg-grey rounded m1 p-1 ">
+            <div><a href=""><span>Legal</span></a></div>
+            <div><a href=""><span>Privacy Center</span></a></div>
+            <div><a href=""><span>About Ads</span></a></div>
+            <div><a href=""><span>Cookies</span></a></div>
+        </footer> -->
+        <div class="right bg-black ">
+            <div class="rightHead bg-black rounded m1 p-1 flex items-center">
+                
+                <div class="buttons1 flex">
+                    <img class="hamburger p-1 invert" src="img/hamburger.svg">
+                    <img src="img/leftArrow.svg" class="p-1 invert"><img src="img/rightArrow.svg" class="p-1 invert">
+                </div>
+
+                <div class="buttons2"><button class="signUp rounded2 p-1">Sign up</button>
+                    <button class="login rounded2 p-1">Login</button>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="spotifyPlaylists bg-grey rounded m1 p-2">
+                <h2>Spotify Playlists</h2>
+                <div class="cardContainer flex m1">
+
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="circle">
+
+                    </div>
+                </div>
+                <div class="aboveBar">
+
+                    <div class="songName">Hi</div>
+                    <div class="songButtons">
+                        <img id="prev" src="img/previous.svg">
+                        <img id="play" src="img/play.svg">
+                        <img id="next" src="img/next.svg">
+                    </div>
+                    <div class="timeAndVol">
+                        <div class="songTime"></div>
+                        <div class="volume"><img id="muteButton" src="img/volume.svg">
+                            <div class="volumeBar">
+                                <input type="range" id="vol" name="volumeLevel">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

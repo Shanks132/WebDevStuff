@@ -1,0 +1,21 @@
+{
+  "name": "newpack",
+  "version": "1.0.0",
+  "description": "pp poo poo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "CDS",
+    "NUTZ"
+  ],
+  "author": "Itto",
+  "license": "ISC",
+  "dependencies": {
+    "anime": "^0.1.2",
+    "express": "^4.18.2",
+    "slugify": "^1.6.6"
+  }
+}

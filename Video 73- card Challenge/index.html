@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Card</title>
+</head>
+<style>
+    *{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .container{
+        border : 2px solid rgba(0, 0, 0, 0.699);
+        display: flex;
+        flex-direction: row;
+        height:30vh;
+        width:100vw;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        text-align: center; 
+        position:fixed;
+        background-color: rgb(67, 62, 62);
+        gap:3vw;
+        margin:auto;    
+    }
+    .thumbnailAndDuration img{
+        width:25vw;
+        height:30vh;
+        position: relative;
+        justify-self: left;
+        top: 13px;
+        z-index: 2;
+    }
+    .duration{
+        background-color: black;
+        color: white;
+        position:relative;
+        top: -10px;
+        left: 160px;
+        z-index: 3;
+    }
+
+    .titleAndDetails{
+        height:30vh;
+        width:70vw;
+        display:flex;
+        flex-direction: column;
+        color:white;
+        text-align: left;
+        gap:10px;
+
+    }
+    .title{
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .chName{
+        font-size: 20px;
+    }
+
+</style>    
+<body>
+    <div class="container">
+        <div class="thumbnailAndDuration"><img src = "https://i.ytimg.com/vi/dQw4w9WgXcQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRxusbm2_TGTnDWEIhBTYW2cUQkw"><span class ="duration">10:00</span></div>
+
+        <div class ="titleAndDetails">
+            <div class="title">Rick Astley - Never Gonna Give You Up (Official Music Video)</div>
+            <div class="chName">Rick Astley</div>
+            <div class="viewDurationTime"><span class="views">69 views</span>&nbsp;&nbsp;&nbsp;<span class = "postedAgo">2 months ago </span>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

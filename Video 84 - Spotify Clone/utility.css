@@ -1,0 +1,71 @@
+.flex{
+    display:flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.border{
+    border:2px solid green
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}
+.invert{
+    filter:invert(1) ;
+}
+.bg-grey{
+    background-color: #121212;
+
+}
+
+.rounded{
+    border-radius:7px;
+}
+.m1{
+    margin:5px;
+}
+.p-1{
+    padding:10px;
+}
+.bg-lightGrey{
+    background-color: #242424;
+    color:white
+}
+.rounded2{
+    border-radius: 20px;
+}
+.clickable:hover{
+    text-decoration: underline;
+}
+.bg-lightGrey2{
+    background-color: #1c1c1c;
+}
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #3f3f3f;
+    /* Dark color for the thumb */
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgba(51, 51, 51, 0.183); 
+     /* Light color for the track */
+  }
+  
+  /* For Firefox */
+  /* Note: Firefox supports scrollbar-color property in version 64 and later */
+  
+  /* Set the scrollbar color */
+  /* scrollbar-color: thumbColor trackColor; */
+  
+  /* Set dark thumb color and light track color */
+  /* scrollbar-color: #333 #f0f0f0; */
+  
