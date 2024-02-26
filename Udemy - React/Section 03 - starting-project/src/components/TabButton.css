@@ -1,0 +1,9 @@
+.detailsButton{
+    background-color: rgba(0, 255, 255, 0);
+    color:white;
+    border-radius: 6px;
+}
+.buttonSet{
+    display: flex;
+    flex-direction: row;
+}

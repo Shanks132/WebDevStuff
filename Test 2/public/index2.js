@@ -1,0 +1,1 @@
+console.log("the 2nd page is also working")

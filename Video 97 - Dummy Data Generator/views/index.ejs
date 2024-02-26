@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="generateButton">Generate Employee Data</button>
+    <button id="deleteButton">Delete Employee Data</button>
+</body>
+<script>
+   
+    let generateButton = document.getElementById("generateButton")
+    generateButton.addEventListener("click", async () => {
+        alert(" generate Button is clicked")
+        let a = await fetch("/generate");
+        
+        console.log(await a.json())
+    });
+</script>
+
+</html>

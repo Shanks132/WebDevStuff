@@ -1,0 +1,15 @@
+import logo from '../assets/logo.png';
+import classes from'./header.module.css'
+export default function Header() {
+  return (
+    <header>
+      <img src={logo} alt="A canvas" />
+      <h1>ReactArt</h1>
+      <p className={classes.paragraph} style={
+        {color:'red',textAlign:'center',} //inline styles in react 
+        }>A community of artists and art-lovers.</p>
+    </header>
+  );
+}
+ 
+ 
