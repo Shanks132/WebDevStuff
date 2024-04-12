@@ -8,10 +8,15 @@ import logoImg from './assets/logo.png';
 import {sortPlacesByDistance} from './loc.js'
 
 function App() {
-  const modal = useRef();
+  const storedIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
+  const storedPlaces = storedIds.map((id)=>
+    AVAILABLE_PLACES.find((place)=>place.id===id)
+  )
+
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   const selectedPlace = useRef();
   const [availablePlaces, setAvailablePlaces] = useState([]);
-  const [pickedPlaces, setPickedPlaces] = useState([]);
+  const [pickedPlaces, setPickedPlaces] = useState(storedPlaces);
 
 
   useEffect(()=>{
@@ -30,12 +35,12 @@ function App() {
   //but this will execute with each render if no dependency given
   
   function handleStartRemovePlace(id) {
-    modal.current.open();
+    setModalIsOpen(true)
     selectedPlace.current = id;
   }
 
   function handleStopRemovePlace() {
-    modal.current.close();
+    setModalIsOpen(false)
   }
 
   function handleSelectPlace(id) {
@@ -46,21 +51,38 @@ function App() {
       const place = AVAILABLE_PLACES.find((place) => place.id === id);
       return [place, ...prevPickedPlaces];
     });
+
+    const storedIds = JSON.parse(localStorage.getItem("selectedPlaces"))|| [];
+    if(storedIds.indexOf(id) === -1){
+      localStorage.setItem("selectedPlaces", JSON.stringify([id,...storedIds]))
+    }
+    //another side effect
+    //but useEffect can be avoided 
+
+    //useEffect only needed when the effect needs to avoid a perma loop
+    // Or when it needs some data before executing(like location in the prev case)
   }
 
   function handleRemovePlace() {
     setPickedPlaces((prevPickedPlaces) =>
       prevPickedPlaces.filter((place) => place.id !== selectedPlace.current)
     );
-    modal.current.close();
+    setModalIsOpen(false)
+
+    const storedIds = JSON.parse(localStorage.getItem("selectedPlaces"))|| [];
+    localStorage.setItem('selectedPlaces',
+     JSON.stringify
+     (storedIds.filter((id)=>{id!==selectedPlace.current;})));
+      
   }
 
   return (
     <>
-      <Modal ref={modal}>
+      <Modal open={modalIsOpen} onClose={handleRemovePlace} >
         <DeleteConfirmation
           onCancel={handleStopRemovePlace}
           onConfirm={handleRemovePlace}
+          
         />
       </Modal>
 
