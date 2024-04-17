@@ -5,12 +5,12 @@ import { AVAILABLE_PLACES } from './data.js';
 import Modal from './components/Modal.jsx';
 import DeleteConfirmation from './components/DeleteConfirmation.jsx';
 import logoImg from './assets/logo.png';
-import {sortPlacesByDistance} from './loc.js'
+import { sortPlacesByDistance } from './loc.js'
 
 function App() {
   const storedIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
-  const storedPlaces = storedIds.map((id)=>
-    AVAILABLE_PLACES.find((place)=>place.id===id)
+  const storedPlaces = storedIds.map((id) =>
+    AVAILABLE_PLACES.find((place) => place.id === id)
   )
 
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -19,21 +19,21 @@ function App() {
   const [pickedPlaces, setPickedPlaces] = useState(storedPlaces);
 
 
-  useEffect(()=>{
-    navigator.geolocation.getCurrentPosition((position)=>{
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
       //is callback function which is executed when permission granted
       const sortedPlaces = sortPlacesByDistance(
-       AVAILABLE_PLACES,
-       position.coords.latitude,
-       position.coords.longitude
-       );
-       setAvailablePlaces(sortedPlaces)  
-      }
-      );// this code is a side effect
+        AVAILABLE_PLACES,
+        position.coords.latitude,
+        position.coords.longitude
+      );
+      setAvailablePlaces(sortedPlaces)
+    }
+    );// this code is a side effect
   })
   //this effect function executes only once after the first render if [] is given as dependency
   //but this will execute with each render if no dependency given
-  
+
   function handleStartRemovePlace(id) {
     setModalIsOpen(true)
     selectedPlace.current = id;
@@ -52,9 +52,9 @@ function App() {
       return [place, ...prevPickedPlaces];
     });
 
-    const storedIds = JSON.parse(localStorage.getItem("selectedPlaces"))|| [];
-    if(storedIds.indexOf(id) === -1){
-      localStorage.setItem("selectedPlaces", JSON.stringify([id,...storedIds]))
+    const storedIds = JSON.parse(localStorage.getItem("selectedPlaces")) || [];
+    if (storedIds.indexOf(id) === -1) {
+      localStorage.setItem("selectedPlaces", JSON.stringify([id, ...storedIds]))
     }
     //another side effect
     //but useEffect can be avoided 
@@ -69,21 +69,23 @@ function App() {
     );
     setModalIsOpen(false)
 
-    const storedIds = JSON.parse(localStorage.getItem("selectedPlaces"))|| [];
+    const storedIds = JSON.parse(localStorage.getItem("selectedPlaces")) || [];
     localStorage.setItem('selectedPlaces',
-     JSON.stringify
-     (storedIds.filter((id)=>{id!==selectedPlace.current;})));
-      
+      JSON.stringify
+        (storedIds.filter((id) => { id !== selectedPlace.current; })));
+
   }
 
   return (
     <>
-      <Modal open={modalIsOpen} onClose={handleRemovePlace} >
-        <DeleteConfirmation
+      <Modal open={modalIsOpen} onClose={handleStopRemovePlace}>
+        { modalIsOpen &&  
+
+          <DeleteConfirmation
           onCancel={handleStopRemovePlace}
           onConfirm={handleRemovePlace}
-          
-        />
+          />
+        }
       </Modal>
 
       <header>
