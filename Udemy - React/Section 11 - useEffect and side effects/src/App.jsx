@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import Places from './components/Places.jsx';
 import { AVAILABLE_PLACES } from './data.js';
@@ -63,18 +63,23 @@ function App() {
     // Or when it needs some data before executing(like location in the prev case)
   }
 
-  function handleRemovePlace() {
-    setPickedPlaces((prevPickedPlaces) =>
-      prevPickedPlaces.filter((place) => place.id !== selectedPlace.current)
-    );
-    setModalIsOpen(false)
-
-    const storedIds = JSON.parse(localStorage.getItem("selectedPlaces")) || [];
-    localStorage.setItem('selectedPlaces',
-      JSON.stringify
-        (storedIds.filter((id) => { id !== selectedPlace.current; })));
-
-  }
+  const handleRemovePlace = useCallback(
+    function handleRemovePlace() {
+      setPickedPlaces((prevPickedPlaces) =>
+        prevPickedPlaces.filter((place) => place.id !== selectedPlace.current)
+      );
+      setModalIsOpen(false)
+  
+      const storedIds = JSON.parse(localStorage.getItem("selectedPlaces")) || [];
+      localStorage.setItem('selectedPlaces',
+        JSON.stringify
+          (storedIds.filter((id) => { id !== selectedPlace.current; })));
+  
+    },[]);
+    //This is why you use callback when you pass fucntion as arguments in useEffect
+    //not recreated whenever we rexecute it and is stored inentionally
+    //and solves the problem of infinite loop on useEffect in deleteConfirmation component
+  
 
   return (
     <>

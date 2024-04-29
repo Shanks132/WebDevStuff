@@ -1,0 +1,31 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+
+
+  background-color: #242424;
+  /* background-image: url('https://imgs.search.brave.com/JK-bPsYa9585-N9uDQ_0S_ZjmZdUxoiHnIPKhg7VUuM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qk5EUXpPREUw/T0RFdE9EUmtNeTAw/WlRJekxXRmlOR0l0/WkRsaVl6UmxNakZp/TURobFhrRXlYa0Zx/Y0dkZVFYVnlPREF6/TnpBd09UVUAuanBn'); */
+  object-fit: fill;
+  background-repeat: no-repeat;
+  
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
