@@ -9,7 +9,7 @@ function Modal({ open, children, onClose }) {
       dialog.current.showModal();
     } else {
       dialog.current.close();
-    }
+    } 
   }, [open]);
  
   return createPortal(
