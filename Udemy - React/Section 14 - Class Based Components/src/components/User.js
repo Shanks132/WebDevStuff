@@ -1,4 +1,5 @@
 import classes from './User.module.css';
+<<<<<<< Updated upstream
 import { Component } from 'react';
 
 class User extends Component{
@@ -14,5 +15,11 @@ class User extends Component{
 // const User = (props) => {
 //   return <li className={classes.user}>{props.name}</li>;
 // };
+=======
+
+const User = (props) => {
+  return <li className={classes.user}>{props.name}</li>;
+};
+>>>>>>> Stashed changes
 
 export default User;

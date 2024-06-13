@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import { useState, Component } from 'react';
+=======
+import { useState } from 'react';
+>>>>>>> Stashed changes
 import User from './User';
 
 import classes from './Users.module.css';
@@ -9,6 +13,7 @@ const DUMMY_USERS = [
   { id: 'u3', name: 'Julie' },
 ];
 
+<<<<<<< Updated upstream
 class Users extends Component {
   constructor() {
     super();
@@ -45,6 +50,9 @@ class Users extends Component {
 
 
 /*const Users = () => {
+=======
+const Users = () => {
+>>>>>>> Stashed changes
   const [showUsers, setShowUsers] = useState(true);
 
   const toggleUsersHandler = () => {
@@ -68,5 +76,9 @@ class Users extends Component {
     </div>
   );
 };
+<<<<<<< Updated upstream
 */
+=======
+
+>>>>>>> Stashed changes
 export default Users;
