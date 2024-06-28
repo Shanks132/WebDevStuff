@@ -10,7 +10,7 @@ const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 const userRoutes = require("./api/routes/user")
 
-//shouldnt userpassword directly here but that it for now
+//shouldnt userpassword directly here but it is what it is for now
 mongoose.connect("mongodb+srv://kannanshankar130203:Shankar%4013@restapicluster.cbsm0tq.mongodb.net/?retryWrites=true&w=majority&appName=RESTapiCluster");
 
 app.use(morgan('dev'))
