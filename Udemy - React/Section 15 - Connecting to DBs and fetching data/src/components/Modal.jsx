@@ -11,7 +11,7 @@ function Modal({ open, children, onClose }) {
       dialog.current.close();
     }
   }, [open]);
-
+  
   return createPortal(
     <dialog className="modal" ref={dialog} onClose={onClose}>
       {open ? children : null}

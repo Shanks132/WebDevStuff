@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require('mongoose');
 
-const Order = require('../models/order');
 const Product = require("../models/products");
 
 exports.products_get_all = (req, res, next) => {
@@ -122,7 +121,9 @@ exports.products_update_product = (req, res, next) => {
     updateOps[ops.propName] = ops.value;
   }
   
-  Product.updateOne({_id : id},{$set:updateOps}).exec().then(result=>{
+  Product.updateOne({_id : id},{$set:updateOps})
+  .exec()
+  .then(result=>{
     console.log(result);
     res.status(200).json({
       message:"Prduct updated",
